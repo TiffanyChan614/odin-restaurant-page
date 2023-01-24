@@ -4,11 +4,11 @@ function createContact(mainElem) {
   mainElem.appendChild(contact);
 
   const contactElem = document.querySelector("#contact");
-  let contactHeader = document.querySelector("h2");
+  let contactHeader = document.createElement("h2");
   contactHeader.textContent = "Contact Us";
   contactElem.appendChild(contactHeader);
 
-  let contactP = document.querySelector("p");
+  let contactP = document.createElement("p");
   contactP.textContent =
     "Contact us for any questions or to make a reservation.";
   contactElem.appendChild(contactP);

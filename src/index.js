@@ -69,8 +69,6 @@ function createMain() {
 
   const mainElem = document.querySelector("main");
   createHome(mainElem);
-  createMenu(mainElem);
-  createContact(mainElem);
 }
 
 function CreateFooter() {
@@ -85,7 +83,7 @@ function CreateFooter() {
 }
 
 function tabSwitch() {
-  const main = document.querySelector("#main");
+  const main = document.querySelector("main");
   const home = document.querySelector("#home-nav");
   const menu = document.querySelector("#menu-nav");
   const contact = document.querySelector("#contact-nav");
@@ -96,7 +94,7 @@ function tabSwitch() {
   for (let i = 0; i < funcArr.length; i++) {
     tabArr[i].addEventListener("click", () => {
       main.textContent = "";
-      funcArr[i];
+      funcArr[i](main);
     });
   }
 }
