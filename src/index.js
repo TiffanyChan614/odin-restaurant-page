@@ -1,11 +1,12 @@
 import { createHome } from "./home";
 import { createMenu } from "./menu";
 import { createContact } from "./contact";
+import "./style.css";
 
 function createHeader() {
-  const contentDiv = document.querySelector("#content");
+  const topDiv = document.querySelector("#top");
   let header = document.createElement("header");
-  contentDiv.appendChild(header);
+  topDiv.appendChild(header);
 
   const headerElem = document.querySelector("header");
   let title = document.createElement("h1");
@@ -14,9 +15,9 @@ function createHeader() {
 }
 
 function createNav() {
-  const contentDiv = document.querySelector("#content");
+  const topDiv = document.querySelector("#top");
   let nav = document.createElement("nav");
-  contentDiv.appendChild(nav);
+  topDiv.appendChild(nav);
 
   const navElem = document.querySelector("nav");
   createNavDivs(navElem);
@@ -35,31 +36,9 @@ function createNavDivs(navElem) {
     div.textContent = navsArr[i].text;
     navElem.appendChild(div);
   }
-}
 
-function createNavList(navElem) {
-  let list = document.createElement("ul");
-  navElem.appendChild(list);
-  const listElem = document.querySelector("ul");
-  createNavListItems(listElem);
-}
-
-function createNavListItems(listElem) {
-  let navsArr = [
-    { name: "home", text: "Home" },
-    { name: "menu", text: "Menu" },
-    { name: "contact", text: "Contact Us" },
-  ];
-  for (let i = 0; i < navsArr.length; i++) {
-    let li = document.createElement("li");
-    li.setAttribute("id", `${navsArr[i].name}-link`);
-    listElem.appendChild(li);
-    const liElem = document.querySelector(`#${navsArr[i].name}-link`);
-    let a = document.createElement("a");
-    a.href = `#${navsArr[i].name}`;
-    a.textContent = `${navsArr[i].text}`;
-    liElem.appendChild(a);
-  }
+  const homeNav = document.querySelector("#home-nav");
+  homeNav.classList.add("selected");
 }
 
 function createMain() {
@@ -72,9 +51,9 @@ function createMain() {
 }
 
 function CreateFooter() {
-  const contentDiv = document.querySelector("#content");
+  const bottomDiv = document.querySelector("#bottom");
   let footer = document.createElement("footer");
-  contentDiv.appendChild(footer);
+  bottomDiv.appendChild(footer);
 
   const footerElem = document.querySelector("footer");
   let p = document.createElement("p");
@@ -95,6 +74,13 @@ function tabSwitch() {
     tabArr[i].addEventListener("click", () => {
       main.textContent = "";
       funcArr[i](main);
+      for (let tab of tabArr) {
+        if (tab === tabArr[i]) {
+          tab.classList.toggle("selected", true);
+        } else {
+          tab.classList.toggle("selected", false);
+        }
+      }
     });
   }
 }
