@@ -1,3 +1,5 @@
+import Chef from "./chef.png";
+
 function createHome(mainElem) {
   let home = document.createElement("section");
   home.setAttribute("id", "home");
@@ -25,9 +27,9 @@ function createHomeContent(homeElem) {
       "with only the freshest and highest-quality ingredients."
   );
 
-  let img = document.createElement("img");
-  img.setAttribute("src", "../src/chef.png");
-  img.setAttribute("alt", "Adam Smith: Our head chef");
+  const chef = new Image();
+  chef.src = Chef;
+  chef.alt = "Adam Smith: Our head chef";
 
   let p2 = document.createElement("p");
   p2.textContent = "Come on down for some delicious cuisine!";
@@ -35,7 +37,7 @@ function createHomeContent(homeElem) {
 
   homeElem.appendChild(homeHeader);
   homeElem.appendChild(p1);
-  homeElem.appendChild(img);
+  homeElem.appendChild(chef);
   homeElem.appendChild(p2);
 }
 

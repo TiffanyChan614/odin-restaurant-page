@@ -1,3 +1,8 @@
+import Food1 from "./food1.png";
+import Food2 from "./food2.png";
+import Food3 from "./food3.png";
+import Food4 from "./food4.png";
+
 function createMenu(mainElem) {
   let menu = document.createElement("section");
   menu.setAttribute("id", "menu");
@@ -95,22 +100,22 @@ function createMenuList(menuListElem, index, title, content) {
 }
 
 function createMenuImage(menuImageElem) {
-  let img1 = document.createElement("img");
-  img1.setAttribute("src", "../src/food1.png");
-  img1.setAttribute("alt", "Fried Calamari");
-  let img2 = document.createElement("img");
-  img2.setAttribute("src", "../src/food2.png");
-  img2.setAttribute("alt", "Greek Salad");
-  let img3 = document.createElement("img");
-  img3.setAttribute("src", "../src/food3.png");
-  img3.setAttribute("alt", "Lobster Tail");
-  let img4 = document.createElement("img");
-  img4.setAttribute("src", "../src/food4.png");
-  img4.setAttribute("alt", "Crème Brulee");
-  menuImageElem.appendChild(img1);
-  menuImageElem.appendChild(img2);
-  menuImageElem.appendChild(img3);
-  menuImageElem.appendChild(img4);
+  const food1 = new Image();
+  food1.src = Food1;
+  food1.alt = "Fried Calamri";
+  const food2 = new Image();
+  food2.src = Food2;
+  food2.alt = "Greek Salad";
+  const food3 = new Image();
+  food3.src = Food3;
+  food3.alt = "Lobster Tail";
+  const food4 = new Image();
+  food4.src = Food4;
+  food4.alt = "Crème Brulee";
+  menuImageElem.appendChild(food1);
+  menuImageElem.appendChild(food2);
+  menuImageElem.appendChild(food3);
+  menuImageElem.appendChild(food4);
 }
 
 export { createMenu };
