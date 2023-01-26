@@ -2,7 +2,7 @@ import Chef from "./chef.png";
 
 function createHome(mainElem) {
   let home = document.createElement("section");
-  home.setAttribute("id", "home");
+  home.id = "home";
   mainElem.appendChild(home);
 
   const homeElem = document.querySelector("#home");
@@ -15,7 +15,7 @@ function createHomeContent(homeElem) {
 
   let span = document.createElement("span");
   span.textContent = "The Gourmet's Delight";
-  span.setAttribute("id", "name");
+  span.id = "name";
 
   let p1 = document.createElement("p");
   p1.textContent = "Welcome to ";
@@ -33,7 +33,7 @@ function createHomeContent(homeElem) {
 
   let p2 = document.createElement("p");
   p2.textContent = "Come on down for some delicious cuisine!";
-  p2.setAttribute("id", "come-msg");
+  p2.id = "come-msg";
 
   homeElem.appendChild(homeHeader);
   homeElem.appendChild(p1);

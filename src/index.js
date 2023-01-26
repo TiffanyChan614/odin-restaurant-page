@@ -32,7 +32,7 @@ function createNavDivs(navElem) {
 
   for (let i = 0; i < navsArr.length; i++) {
     let div = document.createElement("div");
-    div.setAttribute("id", `${navsArr[i].name}-nav`);
+    div.id = `${navsArr[i].name}-nav`;
     div.textContent = navsArr[i].text;
     navElem.appendChild(div);
   }

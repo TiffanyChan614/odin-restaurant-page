@@ -5,7 +5,7 @@ import Food4 from "./food4.png";
 
 function createMenu(mainElem) {
   let menu = document.createElement("section");
-  menu.setAttribute("id", "menu");
+  menu.id = "menu";
   mainElem.appendChild(menu);
 
   const menuElem = document.querySelector("#menu");
@@ -21,19 +21,19 @@ function createMenuHeader(menuElem) {
 
 function createMenuContent(menuElem) {
   let menuContent = document.createElement("div");
-  menuContent.setAttribute("id", "menu-content");
+  menuContent.id = "menu-content";
   menuElem.appendChild(menuContent);
 
   const menuContentElem = document.querySelector("#menu-content");
   let menuText = document.createElement("div");
-  menuText.setAttribute("id", "menu-text");
+  menuText.id = "menu-text";
   menuContentElem.appendChild(menuText);
 
   const menuTextElem = document.querySelector("#menu-text");
   createMenuText(menuTextElem);
 
   let menuImage = document.createElement("div");
-  menuImage.setAttribute("id", "menu-image");
+  menuImage.id = "menu-image";
   menuContentElem.appendChild(menuImage);
 
   const menuImageElem = document.querySelector("#menu-image");

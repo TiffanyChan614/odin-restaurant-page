@@ -1,6 +1,6 @@
 function createContact(mainElem) {
   let contact = document.createElement("section");
-  contact.setAttribute("id", "contact");
+  contact.id = "contact";
   mainElem.appendChild(contact);
 
   const contactElem = document.querySelector("#contact");
@@ -18,7 +18,7 @@ function createContact(mainElem) {
 
 function createContactInfo(contactElem) {
   let info = document.createElement("ul");
-  info.setAttribute("id", "contact-info");
+  info.id = "contact-info";
   contactElem.appendChild(info);
 
   const infoElem = document.querySelector("#contact-info");
