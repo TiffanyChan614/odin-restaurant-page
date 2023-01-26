@@ -1,15 +1,15 @@
 import Chef from "./chef.png";
 
-function createHome(mainElem) {
+const createHome = (mainElem) => {
   let home = document.createElement("section");
   home.id = "home";
   mainElem.appendChild(home);
 
   const homeElem = document.querySelector("#home");
   createHomeContent(homeElem);
-}
+};
 
-function createHomeContent(homeElem) {
+const createHomeContent = (homeElem) => {
   let homeHeader = document.createElement("h2");
   homeHeader.textContent = "About Us";
 
@@ -39,6 +39,6 @@ function createHomeContent(homeElem) {
   homeElem.appendChild(p1);
   homeElem.appendChild(chef);
   homeElem.appendChild(p2);
-}
+};
 
 export { createHome };

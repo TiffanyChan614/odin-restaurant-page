@@ -3,7 +3,7 @@ import Food2 from "./food2.png";
 import Food3 from "./food3.png";
 import Food4 from "./food4.png";
 
-function createMenu(mainElem) {
+const createMenu = (mainElem) => {
   let menu = document.createElement("section");
   menu.id = "menu";
   mainElem.appendChild(menu);
@@ -11,15 +11,15 @@ function createMenu(mainElem) {
   const menuElem = document.querySelector("#menu");
   createMenuHeader(menuElem);
   createMenuContent(menuElem);
-}
+};
 
-function createMenuHeader(menuElem) {
+const createMenuHeader = (menuElem) => {
   let menuHeader = document.createElement("h2");
   menuHeader.textContent = "Dinner Menu";
   menuElem.appendChild(menuHeader);
-}
+};
 
-function createMenuContent(menuElem) {
+const createMenuContent = (menuElem) => {
   let menuContent = document.createElement("div");
   menuContent.id = "menu-content";
   menuElem.appendChild(menuContent);
@@ -38,9 +38,9 @@ function createMenuContent(menuElem) {
 
   const menuImageElem = document.querySelector("#menu-image");
   createMenuImage(menuImageElem);
-}
+};
 
-function createMenuText(menuTextElem) {
+const createMenuText = (menuTextElem) => {
   let menuList = document.createElement("ul");
   menuTextElem.appendChild(menuList);
 
@@ -73,9 +73,9 @@ function createMenuText(menuTextElem) {
   for (let i = 0; i < titleArr.length; i++) {
     createMenuList(menuListElem, i, titleArr[i], contentArr[i]);
   }
-}
+};
 
-function createMenuList(menuListElem, index, title, content) {
+const createMenuList = (menuListElem, index, title, content) => {
   let li = document.createElement("li");
   menuListElem.appendChild(li);
   const liElem = document.querySelector(
@@ -97,9 +97,9 @@ function createMenuList(menuListElem, index, title, content) {
     innerLi.textContent = `${content[i].dish} - $${content[i].price}`;
     innerListElem.appendChild(innerLi);
   }
-}
+};
 
-function createMenuImage(menuImageElem) {
+const createMenuImage = (menuImageElem) => {
   const food1 = new Image();
   food1.src = Food1;
   food1.alt = "Fried Calamri";
@@ -116,6 +116,6 @@ function createMenuImage(menuImageElem) {
   menuImageElem.appendChild(food2);
   menuImageElem.appendChild(food3);
   menuImageElem.appendChild(food4);
-}
+};
 
 export { createMenu };

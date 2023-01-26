@@ -1,4 +1,4 @@
-function createContact(mainElem) {
+const createContact = (mainElem) => {
   let contact = document.createElement("section");
   contact.id = "contact";
   mainElem.appendChild(contact);
@@ -14,9 +14,9 @@ function createContact(mainElem) {
   contactElem.appendChild(contactP);
 
   createContactInfo(contactElem);
-}
+};
 
-function createContactInfo(contactElem) {
+const createContactInfo = (contactElem) => {
   let info = document.createElement("ul");
   info.id = "contact-info";
   contactElem.appendChild(info);
@@ -32,6 +32,6 @@ function createContactInfo(contactElem) {
     li.textContent = infoContent[i];
     infoElem.appendChild(li);
   }
-}
+};
 
 export { createContact };
