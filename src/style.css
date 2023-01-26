@@ -40,6 +40,9 @@ body {
   flex-direction: column;
   padding: 2rem;
   height: 11rem;
+  position: sticky;
+  top: 0;
+  background-color: black;
 }
 
 header {
@@ -83,7 +86,6 @@ main {
   flex-shrink: 0;
 }
 
-#top,
 #home,
 #menu,
 #contact,
